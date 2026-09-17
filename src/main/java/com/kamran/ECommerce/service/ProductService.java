@@ -1,6 +1,7 @@
 package com.kamran.ECommerce.service;
 
 import com.kamran.ECommerce.model.Product;
+import com.kamran.ECommerce.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,25 +9,37 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    List<Product> products = List.of(
-            new Product(1, "Product 1", 100),
-            new Product(2, "Product 2", 200),
-            new Product(3, "Product 3", 300)
-    );
+    ProductRepository productRepository;
+
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
+
+//    List<Product> products = List.of(
+//            new Product(1, "Product 1", 100),
+//            new Product(2, "Product 2", 200),
+//            new Product(3, "Product 3", 300)
+//    );
 
     public List<Product> getAllProducts() {
-        return products;
+
+        return productRepository.findAll();
     }
 
     public Product getProductById(int id) {
-        return products.stream()
-                .filter(product -> product.getId() == id)
-                .findFirst()
-                .orElse(null);
+        return productRepository.findById(id).orElse(null);
     }
 
     public Product saveProduct(Product product) {
-        products.add(product);
-        return product;
+        return productRepository.save(product);
     }
+
+    public Product updateProduct(Product product) {
+        return productRepository.save(product);
+    }
+
+    public void deleteProduct(int id) {
+        productRepository.deleteById(id);
+    }
+
 }

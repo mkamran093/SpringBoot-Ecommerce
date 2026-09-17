@@ -16,7 +16,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<Product> getProducts() {
         return productService.getAllProducts();
     }
@@ -26,9 +26,19 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public Product createProduct(@RequestBody Product product) {
-
         return productService.saveProduct(product);
+    }
+
+    @PutMapping
+    public Product updateProduct(@RequestBody Product product) {
+        return productService.updateProduct(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteProduct(@PathVariable int id) {
+        productService.deleteProduct(id);
+        return "Product deleted successfully";
     }
 }

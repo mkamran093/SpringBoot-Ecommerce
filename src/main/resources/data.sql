@@ -1,0 +1,22 @@
+INSERT INTO product (name, description, brand, price, category, release_date, available, quantity) VALUES
+('Quantum Phone 13', 'Flagship smartphone with OLED display and 5G', 'TechNova', 999.99, 'Electronics', '2026-01-15', TRUE, 50),
+('SonicBoom Wireless Headphones', 'Over-ear noise-canceling bluetooth headphones', 'AudioPhile', 149.50, 'Electronics', '2025-11-20', TRUE, 120),
+('AeroGlide Running Shoes', 'Lightweight breathable mesh sneakers for athletes', 'StrideRight', 85.00, 'Footwear', '2026-03-01', TRUE, 75),
+('Titanium Multi-Tool', '18-in-1 stainless steel pocket tool for camping', 'RuggedGear', 39.99, 'Outdoors', '2025-05-12', TRUE, 200),
+('HydroPure Water Bottle', 'Insulated vacuum flask keeps drinks cold for 24h', 'AquaLife', 24.95, 'Kitchenware', '2026-02-10', FALSE, 0),
+('NeoVibe Smartwatch', 'Fitness tracker with heart rate monitor and GPS', 'TechNova', 199.99, 'Electronics', '2025-08-14', TRUE, 85),
+('UltraBlender 5000', 'High-speed professional blender for smoothies', 'KitchenChef', 129.99, 'Kitchenware', '2024-03-22', TRUE, 40),
+('CloudWalk Slippers', 'Memory foam indoor slippers with anti-slip sole', 'StrideRight', 22.50, 'Footwear', '2025-12-01', TRUE, 150),
+('Apex Gaming Mouse', '16000 DPI wireless RGB mouse for pro gaming', 'LogiTech', 79.99, 'Electronics', '2026-01-10', TRUE, 65),
+('TrailBlazer Backpack', 'Waterproof 40L hiking backpack with rain cover', 'RuggedGear', 64.99, 'Outdoors', '2024-06-18', FALSE, 0),
+('Barista Express', 'Semi-automatic espresso machine with grinder', 'KitchenChef', 599.00, 'Kitchenware', '2025-02-11', TRUE, 15),
+('EcoBreeze Desk Fan', 'Quiet 3-speed oscillating USB desk fan', 'AirFlow', 19.99, 'Home Appliances', '2025-05-20', TRUE, 300),
+('Lumina LED Strip', 'Smart RGB lights compatible with voice assistants', 'TechNova', 29.95, 'Home Decor', '2025-10-05', TRUE, 180),
+('ZenGrip Yoga Mat', 'Eco-friendly non-slip 6mm thick workout mat', 'FitLife', 34.99, 'Fitness', '2024-11-12', TRUE, 90),
+('IronCore Dumbbell Set', 'Adjustable weight plates up to 20kg with case', 'FitLife', 89.99, 'Fitness', '2025-01-25', TRUE, 45),
+('ChronoClassic Watch', 'Stainless steel analog dress watch for men', 'TimePiece', 245.00, 'Accessories', '2023-09-30', TRUE, 25),
+('PolarChill Cooler', 'Heavy-duty rotomolded ice chest keeps cold 5 days', 'RuggedGear', 179.99, 'Outdoors', '2025-04-15', TRUE, 30),
+('PureMist Humidifier', 'Ultrasonic cool mist humidifier with night light', 'AirFlow', 39.99, 'Home Appliances', '2025-11-02', FALSE, 0),
+('UrbanLeather Wallet', 'RFID blocking slim bifold leather wallet', 'TimePiece', 45.00, 'Accessories', '2025-07-07', TRUE, 110),
+('EverGreen Ceramic Pot', 'Minimalist indoor plant pot with drainage saucer', 'AquaLife', 18.50, 'Home Decor', '2026-02-28', TRUE, 70);
+

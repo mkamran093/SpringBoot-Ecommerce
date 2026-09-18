@@ -3,7 +3,9 @@ package com.kamran.ECommerce.service;
 import com.kamran.ECommerce.model.Product;
 import com.kamran.ECommerce.repository.ProductRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -15,12 +17,6 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-//    List<Product> products = List.of(
-//            new Product(1, "Product 1", 100),
-//            new Product(2, "Product 2", 200),
-//            new Product(3, "Product 3", 300)
-//    );
-
     public List<Product> getAllProducts() {
 
         return productRepository.findAll();
@@ -30,7 +26,10 @@ public class ProductService {
         return productRepository.findById(id).orElse(null);
     }
 
-    public Product saveProduct(Product product) {
+    public Product saveProduct(Product product, MultipartFile imageFile) throws IOException {
+        product.setImageName(imageFile.getOriginalFilename());
+        product.setImageType(imageFile.getContentType());
+        product.setImageData(imageFile.getBytes());
         return productRepository.save(product);
     }
 

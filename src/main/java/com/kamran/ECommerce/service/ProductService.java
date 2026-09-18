@@ -33,12 +33,15 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-    public Product updateProduct(Product product) {
-        return productRepository.save(product);
+    public Product updateProduct(Product product, MultipartFile imageFile) throws IOException {
+        return saveProduct(product, imageFile);
     }
 
     public void deleteProduct(int id) {
         productRepository.deleteById(id);
     }
 
+    public List<Product> searchProduct(String keyword) {
+        return productRepository.searchProduct(keyword);
+    }
 }
